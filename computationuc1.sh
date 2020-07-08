@@ -29,5 +29,21 @@ for n in "${myvar[@]}"
 do
     echo "$n"
 done
+for (( i=0 ; i<${#myvar[@]}; i++ ))
+do
+    for (( j=0 ; j<${#myvar[@]}; j++ ))
+    do
+      if [[ ${myvar[$j]} -gt  ${myvar[$i]} ]]
+      then
+        tmp=${myvar[$i]}
+        myvar[$i]=${myvar[$j]}
+        myvar[$j]=${tmp}
+      fi
+    done
+done
 
+for n in "${myvar[@]}"
+do
+    echo "$n"
+done
 
