@@ -8,5 +8,6 @@ echo "Enter any number c:"
 read c
 myvar[1]=$(($a+$b*$c))
 myvar[2]=$(($a*$b+$c))
-echo ${myvar[1]} ${myvar[2]}
-
+myvar[3]=$(($c+$a/$b))
+myvar[4]=$(($a%$b+$c))
+echo ${myvar[1]} ${myvar[2]} ${myvar[3]} ${myvar[4]}
