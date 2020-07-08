@@ -7,4 +7,4 @@ read b
 echo "Enter any number c:"
 read c
 myvar[1]=$(($a+$b*$c))
-echo ${myvar[@]}
+echo ${myvar[1]}
